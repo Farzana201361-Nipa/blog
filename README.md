@@ -1,9 +1,7 @@
 # blog
  <p align="center">
   <p align="center">
-    <a href="https://https://www.djangoproject.com/" target="_blank">
-      <img src="https://www.google.com/imgres?q=django&imgurl=https%3A%2F%2Fdb0dce98.rocketcdn.me%2Fwp-content%2Fuploads%2F2023%2F05%2Fdjango-datascientest.png&imgrefurl=https%3A%2F%2Fdatascientest.com%2Fdjango-tout-savoir&docid=zpFaaxYHlaIWXM&tbnid=TQ_Bad7-blk9wM&vet=12ahUKEwiaiKmGveiIAxWphq8BHaUzJDsQM3oECHMQAA..i&w=1200&h=600&hcb=2&ved=2ahUKEwiaiKmGveiIAxWphq8BHaUzJDsQM3oECHMQAA" alt="Django" height="72">
-    </a>
+    Django
   </p>
   <p align="center">
     ***
@@ -38,7 +36,7 @@ This project includes:
 
 <i>That's all for now</i><br>
 
-<a ><img src="https://www.google.com/imgres?q=Thank%20you&imgurl=https%3A%2F%2Fwww.aim.com.au%2Fsites%2Fdefault%2Ffiles%2Ffield%2Fimage%2FAIM-Blog-Why-Thank-You-Matters-More-Than-Money-New.jpg&imgrefurl=https%3A%2F%2Fwww.aim.com.au%2Fblog%2Fwhy-thank-you-matters-more-money&docid=xZsBHQqeZK2rtM&tbnid=y_OtHtRuDqC9IM&vet=12ahUKEwiU0OGEv-iIAxVKY_UHHS4pEPQQM3oECDwQAA..i&w=1140&h=479&hcb=2&ved=2ahUKEwiU0OGEv-iIAxVKY_UHHS4pEPQQM3oECDwQAA" alt="Thankyou"></a>
-
+<!-- <a ><img src="https://www.google.com/imgres?q=Thank%20you&imgurl=https%3A%2F%2Fwww.aim.com.au%2Fsites%2Fdefault%2Ffiles%2Ffield%2Fimage%2FAIM-Blog-Why-Thank-You-Matters-More-Than-Money-New.jpg&imgrefurl=https%3A%2F%2Fwww.aim.com.au%2Fblog%2Fwhy-thank-you-matters-more-money&docid=xZsBHQqeZK2rtM&tbnid=y_OtHtRuDqC9IM&vet=12ahUKEwiU0OGEv-iIAxVKY_UHHS4pEPQQM3oECDwQAA..i&w=1140&h=479&hcb=2&ved=2ahUKEwiU0OGEv-iIAxVKY_UHHS4pEPQQM3oECDwQAA" alt="Thankyou"></a> -->
+<h1>Thank you</h1>
 </div>
 
