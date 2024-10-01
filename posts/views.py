@@ -35,3 +35,7 @@ def home(request):
         '''
     # return HttpResponse("<h1>Hello World!</h1>")
     return HttpResponse(html)
+
+def post(request,id):
+    print(type(id))
+    return HttpResponse(f"{id}")
