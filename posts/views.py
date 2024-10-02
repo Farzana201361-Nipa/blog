@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseNotFound
+from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 
 
 
@@ -63,7 +63,8 @@ def post(request,id):
     else:
         return  HttpResponseNotFound("<h1>Post not Available :)</h1>")
             
-
-
+#HttpResponseRedirect class to access another url for price
+def price(request):
+    return HttpResponseRedirect('https://www.banglastall.com/filter/Construction/Thai-Aluminium/ALCO')
 
 
