@@ -67,4 +67,5 @@ def post(request,id):
 def price(request):
     return HttpResponseRedirect('https://www.banglastall.com/filter/Construction/Thai-Aluminium/ALCO')
 
-
+def google(request,id):
+    return HttpResponseRedirect(f'/post/{id}/')
