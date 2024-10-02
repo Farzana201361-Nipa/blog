@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseNotFound
 
 
 
@@ -22,12 +22,19 @@ posts =[
         'content': 'Alco Aluminium is situated in Chittagong, Bangladesh. Their product line includes aluminium sheets, extrusions, and coils, which are used in the construction, automotive, and packaging industries. Alco is known for its innovative solutions and sustainable practices.'
     },
 ]
+#Home Page
+
+# def home(request):
+#     return HttpResponse("Home")
+#Access dynamic url using title
 def home(request):
     html=""
     for post in posts:
         html += f'''
             <div>
-                <h1>{post['id']} - {post['title']}</h1>
+            
+            <a href="/post/{post['id']}"> 
+                <h1>{post['id']} - {post['title']}</h1></a>
                 <p> {post['content']}</p>
             
             </div>
@@ -39,3 +46,24 @@ def home(request):
 def post(request,id):
     print(type(id))
     return HttpResponse(f"{id}")
+
+def post(request,id):
+    valid_id = False
+    for post in posts:
+        if post['id'] ==id:
+            post_dict = post
+            valid_id = True
+            break
+    if valid_id:   
+        html = f'''
+            <h1>  {post_dict['title']} </h1>
+            <p> {post_dict['content']}</p>
+        '''
+        return HttpResponse(html)
+    else:
+        return  HttpResponseNotFound("<h1>Post not Available :)</h1>")
+            
+
+
+
+
