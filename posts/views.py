@@ -42,7 +42,8 @@ def home(request):
         '''
     # return HttpResponse("<h1>Hello World!</h1>")
     # return HttpResponse(html)
-    return render(request,'posts/home.html')
+    name = "Farzana"
+    return render(request,'posts/home.html',{"name":name})
 
 def post(request,id):
     print(type(id))
