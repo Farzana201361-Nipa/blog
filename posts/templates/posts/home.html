@@ -6,11 +6,21 @@
     <title>Blog Home Page</title>
 </head>
 <body>
+    {% if posts %}
+    <h1> All posts available </h1>
+        {% comment %} <h1> Welcome - {{posts}}</h1> {% endcomment %}
+        {% for  post in posts %} 
+            <a href= ""> <h1>{{post.title}}</h1> </a>
+            <p>{{post.content}} </p>
+        {% endfor %}
+    {% else %}
+    <h1> No post available </h1>
+    {% endif %}
+
+
+
+
     {% comment %} <h1> Welcome - {{posts}}</h1> {% endcomment %}
-    {% for  post in posts %} 
-        <a href= ""> <h1>{{post.title}}</h1> </a>
-        <p>{{post.content}} </p>
-    {% endfor %}
 
 </body>
 </html>

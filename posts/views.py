@@ -22,6 +22,7 @@ posts =[
         'content': 'Alco Aluminium is situated in Chittagong, Bangladesh. Their product line includes aluminium sheets, extrusions, and coils, which are used in the construction, automotive, and packaging industries. Alco is known for its innovative solutions and sustainable practices.'
     },
 ]
+# posts=[]
 #Home Page
 
 # def home(request):
