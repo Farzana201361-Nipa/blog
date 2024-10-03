@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
-
+from django.urls import reverse
 
 
 
@@ -68,4 +68,10 @@ def price(request):
     return HttpResponseRedirect('https://www.banglastall.com/filter/Construction/Thai-Aluminium/ALCO')
 
 def google(request,id):
-    return HttpResponseRedirect(f'/post/{id}/')
+    #Using reverse function to dynamically generate the urls
+    url = reverse("post",args=[id])
+    return HttpResponseRedirect(url)
+    # return HttpResponseRedirect(f'/posts/{id}/')
+
+
+
