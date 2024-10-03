@@ -20,7 +20,8 @@ from posts import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('post/',include('posts.urls')),
+    # path('posts/',include('posts.urls')),
+    path('post/',include('posts.urls')),   #will work fine as we used reverse function to generate urls
     # path('post/helloworld/',views.helloWorld)
     path('price/',views.price),
     path("<int:id>/",views.google)
