@@ -24,5 +24,8 @@ urlpatterns = [
     path('post/',include('posts.urls')),   #will work fine as we used reverse function to generate urls
     # path('post/helloworld/',views.helloWorld)
     path('price/',views.price),
-    path("<int:id>/",views.google)
+    path("<int:id>/",views.google),
+   
+    
+    
 ]

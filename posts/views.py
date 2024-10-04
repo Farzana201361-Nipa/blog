@@ -77,6 +77,9 @@ def google(request,id):
     url = reverse("post",args=[id])
     return HttpResponseRedirect(url)
     # return HttpResponseRedirect(f'/posts/{id}/')
+    
+    
+
 
 
 
