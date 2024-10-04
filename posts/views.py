@@ -45,7 +45,7 @@ def home(request):
     # return HttpResponse(html)
     # name = "Farzana"
     # return render(request,'posts/home.html',{"name":name})
-    return render(request,'posts/home.html',{'posts': posts})
+    return render(request,'posts/home.html',{'posts': posts, 'username': 'farzana'})
 
 
 def post(request,id):
@@ -60,11 +60,11 @@ def post(request,id):
             valid_id = True
             break
     if valid_id:   
-        html = f'''
-            <h1>  {post_dict['title']} </h1>
-            <p> {post_dict['content']}</p>
-        '''
-        return HttpResponse(html)
+        # html = f'''
+        #     <h1>  {post_dict['title']} </h1>
+        #     <p> {post_dict['content']}</p>
+        # '''
+        return render(request, "posts/post.html", {'post_dict': post_dict})
     else:
         return  HttpResponseNotFound("<h1>Post not Available :)</h1>")
             
