@@ -1,4 +1,10 @@
 {% extends "base.html" %}
+{%load static%}
+
+{%block css%}
+        <link rel= "stylesheet" href="{% static "posts/home.css"}">
+{%endblock css%}
+
 
 {%block pagetitle%}home.html {%endblock pagetitle%}
 
@@ -29,3 +35,8 @@
 {% endblock body %}
     {% comment %} <h1> Welcome - {{posts}}</h1> {% endcomment %}
  
+
+
+
+
+

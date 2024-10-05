@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect, Http404
 from django.urls import reverse
 
 
@@ -66,7 +66,11 @@ def post(request,id):
         # '''
         return render(request, "posts/post.html", {'post_dict': post_dict})
     else:
-        return  HttpResponseNotFound("<h1>Post not Available :)</h1>")
+        #return  HttpResponseNotFound("<h1>Post not Available :)</h1>")
+        raise Http404()
+    
+    
+    
             
 #HttpResponseRedirect class to access another url for price
 def price(request):

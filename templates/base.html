@@ -1,5 +1,6 @@
 
 <!DOCTYPE html>
+{%load static%}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,6 +9,12 @@
         {%block pagetitle%}
         {%endblock pagetitle%}
     </title>
+
+
+<link rel= "stylesheet" href="{% static 'style.css'%}">
+
+{%block css%}  {%endblock css%}
+
 </head>
 <body>
     <nav> 
@@ -24,3 +31,6 @@
 
 </body>
 </html>
+
+
+
