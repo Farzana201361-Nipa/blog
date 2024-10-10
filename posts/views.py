@@ -82,7 +82,11 @@ def google(request,id):
     return HttpResponseRedirect(url)
     # return HttpResponseRedirect(f'/posts/{id}/')
     
-    
+def about(request):
+    return render(request, 'posts/about.html')
+
+def contact(request):
+    return render(request, 'posts/contact.html')  
 
 
 

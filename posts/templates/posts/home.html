@@ -5,7 +5,8 @@
     {% block css %}
         <link rel="stylesheet" href="{% static 'posts/home.css' %}">
     {% endblock css %}
-    
+    {%block js%}<script src="{% static 'js/home.js'%}"defer></script> {%endblock js%}
+
     {% block pagetitle %}
         Home Page
     {% endblock pagetitle %}

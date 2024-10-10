@@ -4,13 +4,10 @@
 {%load static%}
 
 {%block css%}
-        <link rel= "stylesheet" href="{% static 'posts/post.css'%}">
-        <script src="{% static 'js/main.js'%}"defer></script>
-
-       
+        <link rel= "stylesheet" href="{% static 'posts/post.css'%}">       
 {%endblock css%}
 
-
+{%block js%}<script src="{% static 'js/post.js'%}"defer></script> {%endblock js%}
 
 {%block pagetitle%}post.html {%endblock pagetitle%}
 
