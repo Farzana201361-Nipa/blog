@@ -3,7 +3,14 @@
 
 {%load static%}
 
-<link rel= "stylesheet" href="{% static "posts/post.css"%}">
+{%block css%}
+        <link rel= "stylesheet" href="{% static 'posts/post.css'%}">
+        <script src="{% static 'js/main.js'%}"defer></script>
+
+       
+{%endblock css%}
+
+
 
 {%block pagetitle%}post.html {%endblock pagetitle%}
 
@@ -15,4 +22,5 @@
 
 {% endblock body %}
 
-    
+
+
