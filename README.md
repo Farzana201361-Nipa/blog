@@ -20,15 +20,14 @@ This repository is a Django project of an Blog website for Aluminum Company blog
 Steps:
 
 1. Clone/pull/download this repository
-2. Create a virtualenv with `virtualenv env` and install dependencies with pip
+2. Create a virtualenv and install all dependencies with pip
 3. Check wheather Django is installed or recognized in your virtual environment.
 4. Run the server and explore the project.
 
 This project includes:
 
-1. Settings modules for deploying with Azure
-2. Django commands for renaming your project and creating a superuser
-3. A cli tool for setting environment variables for deployment
+1. Under construction (will be added soon)
+
 
 ---
 
