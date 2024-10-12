@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect, Http404
 from django.urls import reverse
-
+from .models import Post
 
 
 # Create your views here.
@@ -23,12 +23,21 @@ posts =[
     },
 ]
 # posts=[]
-#Home Page
 
 # def home(request):
 #     return HttpResponse("Home")
 #Access dynamic url using title
+#Home Page
 def home(request):
+
+    # return HttpResponse("<h1>Hello World!</h1>")
+    # return HttpResponse(html)
+    # name = "Farzana"
+    # return render(request,'posts/home.html',{"name":name})
+    return render(request,'posts/home.html',{'username': 'farzana'})
+
+
+def blog(request):
     html=""
     for post in posts:
         html += f'''
@@ -41,11 +50,7 @@ def home(request):
             </div>
         
         '''
-    # return HttpResponse("<h1>Hello World!</h1>")
-    # return HttpResponse(html)
-    # name = "Farzana"
-    # return render(request,'posts/home.html',{"name":name})
-    return render(request,'posts/home.html',{'posts': posts, 'username': 'farzana'})
+    return render(request,'posts/blog.html',{'posts': posts}) 
 
 
 def post(request,id):

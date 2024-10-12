@@ -26,7 +26,9 @@ Steps:
 
 This project includes:
 
-1. Under construction (will be added soon)
+1. Created Super user : Farzana (admin0987)
+2. Under construction (will be added soon)
+
 
 
 ---

@@ -1,11 +1,12 @@
 // Function to display a greeting when the page loads
 window.onload = function() {
     let message = document.createElement('p');
-    message.innerText = "Welcome to the About page!";
+    message.innerText = "Learn more about our journey!";
     message.style.textAlign = "center";
     message.style.color = "whitesmoke";
     document.body.prepend(message);
 };
+
 
 // Smooth scrolling for internal links only
 document.querySelectorAll('nav a').forEach(anchor => {
