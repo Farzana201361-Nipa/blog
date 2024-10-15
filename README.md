@@ -26,8 +26,12 @@ Steps:
 
 This project includes:
 
-1. Created Super user : Farzana (admin0987)
-2. Under construction (will be added soon)
+1. Created Super user 
+2.User Login and Auth
+3. Authorization
+
+
+Under construction (will be added soon)
 
 
 
