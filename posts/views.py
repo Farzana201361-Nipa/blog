@@ -3,6 +3,8 @@ from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
 from .models import Post
 
+from .models import Blog_post
+
 
 # Create your views here.
 posts =[
@@ -22,18 +24,8 @@ posts =[
         'content': 'Alco Aluminium is situated in Chittagong, Bangladesh. Their product line includes aluminium sheets, extrusions, and coils, which are used in the construction, automotive, and packaging industries. Alco is known for its innovative solutions and sustainable practices.'
     },
 ]
-# posts=[]
 
-# def home(request):
-#     return HttpResponse("Home")
-#Access dynamic url using title
-#Home Page
 def home(request):
-
-    # return HttpResponse("<h1>Hello World!</h1>")
-    # return HttpResponse(html)
-    # name = "Farzana"
-    # return render(request,'posts/home.html',{"name":name})
     return render(request,'posts/home.html',{'username': 'farzana'})
 
 
@@ -65,10 +57,6 @@ def post(request,id):
             valid_id = True
             break
     if valid_id:   
-        # html = f'''
-        #     <h1>  {post_dict['title']} </h1>
-        #     <p> {post_dict['content']}</p>
-        # '''
         return render(request, "posts/post.html", {'post_dict': post_dict})
     else:
         #return  HttpResponseNotFound("<h1>Post not Available :)</h1>")
@@ -94,5 +82,21 @@ def contact(request):
     return render(request, 'posts/contact.html')  
 
 
+#Solution to avoid slow queries
+def blog_post_list(request):
+    
+    blog_posts = Blog_post.objects.select_related('author').all()
+    for blog_post in blog_posts:
+        print(blog_post.author.name)
+        
+    return render(request, 'posts/blog_post_list.html', {'blog_posts': blog_posts})
 
-
+# Another possible solution to avoid slow queries
+# def blog_post_list(request):
+    
+#     blog_posts = Blog_post.objects.prefetch_related('author').all()
+    
+#     for blog_post in blog_posts:
+#         print(blog_post.author.name)
+        
+#     return render(request, 'blog_post_list.html', {'blog_posts': blog_posts})

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{%load static%}
+
+{%block css%}
+        <link rel= "stylesheet" href="{% static 'posts/post.css'%}">       
+{%endblock css%}
+
+{%block js%}<script src="{% static 'js/post.js'%}"defer></script> {%endblock js%}
+
+{%block pagetitle%}blog_post.html {%endblock pagetitle%}
+
+
+{% block body %}
+
+    <h1>Blog Posts</h1>
+    <ul>
+        {% if blog_posts %}
+            {% for blog_post in blog_posts %}
+                <li>
+                    <h2>{{ blog_post.title }}</h2>
+                    <p>By {{ blog_post.author.name }}</p>
+                    <p>{{ blog_post.content }}</p>
+                </li>
+            {% endfor %}
+
+            {% else %}
+            <h1>No posts available</h1>
+        {% endif %}
+
+    </ul>
+
+
+
+{% endblock body %}
