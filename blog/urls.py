@@ -16,13 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.shortcuts import redirect
 from posts import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('posts/',include('posts.urls')),
-    path('post/',include('posts.urls')),   #will work fine as we used reverse function to generate urls
-    # path('post/helloworld/',views.helloWorld)
+    path('', lambda request: redirect('/post/home/')),
+    path('post/',include('posts.urls')), 
     path('price/',views.price),
     path("<int:id>/",views.google),
    
