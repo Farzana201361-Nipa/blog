@@ -9,7 +9,7 @@
 </p>
 
 
-This repository is a Django project of an Blog website for Aluminum Company blogs regulary .
+This repository is a Django blog website project.
 
 <!-- <p align="center">
   <a><img src="" width="290"></a>
@@ -26,8 +26,8 @@ Steps:
 
 This project includes:
 
-1. Created Super user : Farzana (admin0987)
-2. Under construction (will be added soon)
+
+**Under construction (will be added soon)**
 
 
 
